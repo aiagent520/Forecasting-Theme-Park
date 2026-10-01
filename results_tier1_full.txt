@@ -1,0 +1,95 @@
+  origin 1/60 2026-05-01 done
+  origin 2/60 2026-05-01 done
+  origin 3/60 2026-05-01 done
+  origin 4/60 2026-05-08 done
+  origin 5/60 2026-05-08 done
+  origin 6/60 2026-05-08 done
+  origin 7/60 2026-05-15 done
+  origin 8/60 2026-05-15 done
+  origin 9/60 2026-05-15 done
+  origin 10/60 2026-05-22 done
+  origin 11/60 2026-05-22 done
+  origin 12/60 2026-05-22 done
+  origin 13/60 2026-05-29 done
+  origin 14/60 2026-05-29 done
+  origin 15/60 2026-05-29 done
+  origin 16/60 2026-06-05 done
+  origin 17/60 2026-06-05 done
+  origin 18/60 2026-06-05 done
+  origin 19/60 2026-06-12 done
+  origin 20/60 2026-06-12 done
+  origin 21/60 2026-06-12 done
+  origin 22/60 2026-06-19 done
+  origin 23/60 2026-06-19 done
+  origin 24/60 2026-06-19 done
+  origin 25/60 2026-06-26 done
+  origin 26/60 2026-06-26 done
+  origin 27/60 2026-06-26 done
+  origin 28/60 2026-07-03 done
+  origin 29/60 2026-07-03 done
+  origin 30/60 2026-07-03 done
+  origin 31/60 2026-07-10 done
+  origin 32/60 2026-07-10 done
+  origin 33/60 2026-07-10 done
+  origin 34/60 2026-07-17 done
+  origin 35/60 2026-07-17 done
+  origin 36/60 2026-07-17 done
+  origin 37/60 2026-07-24 done
+  origin 38/60 2026-07-24 done
+  origin 39/60 2026-07-24 done
+  origin 40/60 2026-07-31 done
+  origin 41/60 2026-07-31 done
+  origin 42/60 2026-07-31 done
+  origin 43/60 2026-08-07 done
+  origin 44/60 2026-08-07 done
+  origin 45/60 2026-08-07 done
+  origin 46/60 2026-08-14 done
+  origin 47/60 2026-08-14 done
+  origin 48/60 2026-08-14 done
+  origin 49/60 2026-08-21 done
+  origin 50/60 2026-08-21 done
+  origin 51/60 2026-08-21 done
+  origin 52/60 2026-08-28 done
+  origin 53/60 2026-08-28 done
+  origin 54/60 2026-08-28 done
+  origin 55/60 2026-09-04 done
+  origin 56/60 2026-09-04 done
+  origin 57/60 2026-09-04 done
+  origin 58/60 2026-09-11 done
+  origin 59/60 2026-09-11 done
+  origin 60/60 2026-09-11 done
+Hourly data: 161,264 rows, 80 series | 60 origins (2026-05-01 .. 2026-09-11), horizon 168h
+
+=== snaive — by horizon bucket ===
+               n    mae   rmse  mase    w5   w10
+bucket                                          
+1h          1889   9.20  15.43  0.70  0.53  0.71
+same_day   45390  10.78  16.76  0.86  0.44  0.64
+2-3d       95171  11.68  18.06  0.92  0.41  0.60
+4-7d      183752  10.26  16.21  0.80  0.46  0.66
+
+=== snaive — by park ===
+          n    mae   rmse  mase    w5   w10
+park                                       
+Epic  55919  13.46  21.02  0.92  0.38  0.58
+IOA   77604   8.79  14.06  0.75  0.52  0.70
+USF   52660   7.42  11.05  0.74  0.53  0.74
+USH   54580  10.07  15.26  0.96  0.45  0.65
+USJ   85439  13.22  19.74  0.87  0.34  0.55
+
+=== hourly_avg — by horizon bucket ===
+               n    mae   rmse  mase    w5   w10
+bucket                                          
+1h          1907  10.29  15.45  0.81  0.43  0.63
+same_day   45761  11.41  16.46  0.90  0.37  0.59
+2-3d       96132  10.85  15.97  0.85  0.39  0.61
+4-7d      185684  10.83  15.74  0.85  0.39  0.61
+
+=== hourly_avg — by park ===
+          n    mae   rmse  mase    w5   w10
+park                                       
+Epic  56357  11.88  17.48  0.83  0.37  0.59
+IOA   78018   9.92  14.84  0.81  0.44  0.65
+USF   53068   7.22  10.03  0.72  0.48  0.74
+USH   55300  10.43  15.22  0.98  0.41  0.62
+USJ   86741  13.74  18.86  0.93  0.29  0.50

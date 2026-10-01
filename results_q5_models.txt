@@ -1,0 +1,178 @@
+Hourly data: 161,264 rows, 80 series | 20 origin-days x 3 origins (2026-05-01 00:00:00 .. 2026-09-11 13:00:00) | gbm rows reused: 330,426
+saved 1,646,313 forecast rows -> data/q5_models_fc.parquet
+
+=== q5_snaive — by horizon bucket ===
+               n    mae   rmse  mase    w5   w10
+bucket                                          
+1h          1889   9.20  15.43  0.70  0.53  0.71
+same_day   45390  10.78  16.76  0.86  0.44  0.64
+2-3d       95171  11.68  18.06  0.92  0.41  0.60
+4-7d      183752  10.26  16.21  0.80  0.46  0.66
+
+=== q5_gbm — by horizon bucket ===
+               n    mae   rmse  mase    w5   w10
+bucket                                          
+1h          1910   7.23  11.58  0.57  0.55  0.76
+same_day   45861   9.12  13.92  0.73  0.45  0.68
+2-3d       96441  10.04  15.42  0.80  0.42  0.65
+4-7d      186214   9.04  14.13  0.71  0.47  0.69
+
+=== q5_nhits — by horizon bucket ===
+               n    mae   rmse  mase    w5   w10
+bucket                                          
+1h          1908   6.28  10.32  0.51  0.59  0.82
+same_day   45791   9.73  15.80  0.78  0.46  0.68
+2-3d       96294  10.92  17.74  0.87  0.41  0.64
+4-7d      185902   9.74  15.56  0.77  0.45  0.68
+
+=== q5_patchtst — by horizon bucket ===
+               n    mae   rmse  mase    w5   w10
+bucket                                          
+1h          1908   6.41  10.88  0.52  0.60  0.81
+same_day   45791   9.89  16.00  0.79  0.46  0.67
+2-3d       96294  10.71  17.20  0.85  0.42  0.64
+4-7d      185902   9.37  15.02  0.74  0.47  0.69
+
+=== q5_chronos_bolt — by horizon bucket ===
+               n    mae   rmse  mase    w5   w10
+bucket                                          
+1h          1908   5.93   9.71  0.47  0.60  0.83
+same_day   45791   9.38  14.83  0.75  0.46  0.69
+2-3d       96294  10.06  15.90  0.81  0.44  0.66
+4-7d      185902   9.27  14.74  0.73  0.47  0.69
+
+=== q5_snaive — by regime x bucket ===
+                     n    mae   rmse  mase    w5   w10
+regime bucket                                         
+A      1h          889   6.68  11.59  0.57  0.63  0.78
+       same_day  17867   7.99  12.67  0.72  0.54  0.74
+       2-3d      37422   9.23  14.02  0.85  0.47  0.67
+       4-7d      74086   7.81  12.42  0.69  0.54  0.74
+B      1h          392  12.30  19.84  0.83  0.46  0.66
+       same_day   7548  13.68  21.08  0.97  0.37  0.57
+       2-3d      15964  14.17  22.11  0.95  0.38  0.57
+       4-7d      32015  13.07  20.46  0.90  0.39  0.59
+C      1h          608  10.89  17.03  0.81  0.44  0.64
+       same_day  19975  12.19  18.07  0.93  0.38  0.58
+       2-3d      41785  12.93  19.50  0.98  0.36  0.56
+       4-7d      77651  11.44  17.37  0.86  0.40  0.61
+
+=== q5_gbm — by regime x bucket ===
+                     n    mae   rmse  mase    w5   w10
+regime bucket                                         
+A      1h          901   5.78   9.53  0.49  0.62  0.81
+       same_day  18006   6.74  10.44  0.60  0.55  0.77
+       2-3d      37806   7.76  11.76  0.71  0.50  0.73
+       4-7d      74742   6.89  10.87  0.61  0.55  0.76
+B      1h          399   9.01  14.13  0.63  0.49  0.70
+       same_day   7613  10.57  16.11  0.76  0.41  0.65
+       2-3d      16092  11.80  17.96  0.81  0.39  0.61
+       4-7d      32271  11.31  17.59  0.78  0.41  0.63
+C      1h          610   8.22  12.46  0.64  0.49  0.71
+       same_day  20242  10.69  15.64  0.82  0.38  0.62
+       2-3d      42543  11.41  17.14  0.88  0.37  0.59
+       4-7d      79201  10.15  15.23  0.78  0.41  0.64
+
+=== q5_nhits — by regime x bucket ===
+                     n    mae   rmse  mase    w5   w10
+regime bucket                                         
+A      1h          901   5.09   8.05  0.45  0.65  0.87
+       same_day  18006   6.98  11.23  0.64  0.55  0.78
+       2-3d      37806   8.02  12.33  0.74  0.50  0.72
+       4-7d      74742   7.29  11.37  0.66  0.53  0.76
+B      1h          399   8.74  14.66  0.57  0.53  0.74
+       same_day   7613  10.62  16.92  0.74  0.44  0.66
+       2-3d      16092  11.63  18.80  0.78  0.42  0.64
+       4-7d      32271  11.99  19.21  0.80  0.41  0.63
+C      1h          608   6.43   9.85  0.57  0.56  0.80
+       same_day  20172  11.86  18.60  0.93  0.37  0.60
+       2-3d      42396  13.23  21.10  1.02  0.34  0.56
+       4-7d      78889  11.15  17.24  0.86  0.39  0.62
+
+=== q5_patchtst — by regime x bucket ===
+                     n    mae   rmse  mase    w5   w10
+regime bucket                                         
+A      1h          901   5.19   8.60  0.46  0.65  0.86
+       same_day  18006   6.94  11.29  0.63  0.56  0.79
+       2-3d      37806   7.84  12.13  0.72  0.51  0.73
+       4-7d      74742   7.01  10.99  0.64  0.55  0.77
+B      1h          399   9.12  15.58  0.59  0.52  0.74
+       same_day   7613  10.71  17.28  0.74  0.45  0.67
+       2-3d      16092  11.39  18.44  0.76  0.43  0.65
+       4-7d      32271  11.59  18.79  0.78  0.42  0.64
+C      1h          608   6.44  10.12  0.56  0.57  0.80
+       same_day  20172  12.22  18.83  0.94  0.36  0.58
+       2-3d      42396  13.01  20.29  1.00  0.35  0.56
+       4-7d      78889  10.69  16.52  0.82  0.40  0.63
+
+=== q5_chronos_bolt — by regime x bucket ===
+                     n    mae   rmse  mase    w5   w10
+regime bucket                                         
+A      1h          901   5.16   8.31  0.45  0.63  0.86
+       same_day  18006   6.71  10.93  0.61  0.57  0.79
+       2-3d      37806   7.59  11.76  0.70  0.52  0.74
+       4-7d      74742   6.94  10.89  0.63  0.55  0.77
+B      1h          399   7.82  13.00  0.52  0.54  0.78
+       same_day   7613   9.84  15.60  0.70  0.45  0.68
+       2-3d      16092  10.87  17.32  0.74  0.44  0.66
+       4-7d      32271  11.32  18.61  0.77  0.43  0.64
+C      1h          608   5.82   9.08  0.48  0.61  0.84
+       same_day  20172  11.59  17.35  0.89  0.37  0.59
+       2-3d      42396  11.96  18.35  0.93  0.36  0.58
+       4-7d      78889  10.64  16.06  0.82  0.40  0.63
+
+=== Q5 model class (hourly, all regimes) — DM tests (per-origin-day differentials, NW lag 1) ===
+pair                                                      1h              same_day                  2-3d                  4-7d
+nhits vs gbm                                 -0.054 p=0.008*       +0.054 p=0.070        +0.071 p=0.048*       +0.060 p=0.000*
+patchtst vs gbm                              -0.045 p=0.007*       +0.058 p=0.097        +0.050 p=0.184        +0.029 p=0.047*
+chronos_bolt vs gbm                          -0.092 p=0.000*       +0.021 p=0.385        +0.008 p=0.787        +0.026 p=0.037*
+nhits vs snaive                              -0.193 p=0.000*       -0.082 p=0.028*       -0.064 p=0.065        -0.042 p=0.050 
+chronos_bolt vs snaive                       -0.232 p=0.000*       -0.117 p=0.000*       -0.129 p=0.000*       -0.078 p=0.000*
+
+=== Q5 model class (hourly, all regimes) — MCB mean ranks (blocks = series x origin; * = in best set) ===
+        1h (N=1888, CD=0.14): chronos_bolt 2.84* | nhits 2.94* | patchtst 3.00 | gbm 3.07 | snaive 3.14
+  same_day (N=4331, CD=0.09): chronos_bolt 2.72* | gbm 2.77* | nhits 2.99 | patchtst 3.02 | snaive 3.50
+      2-3d (N=4351, CD=0.09): gbm 2.62* | chronos_bolt 2.66* | patchtst 3.02 | nhits 3.16 | snaive 3.54
+      4-7d (N=4338, CD=0.09): gbm 2.58* | chronos_bolt 2.82 | patchtst 2.83 | nhits 3.15 | snaive 3.62
+
+=== Q5 model class (hourly, regime A only) — DM tests (per-origin-day differentials, NW lag 1) ===
+pair                                                      1h              same_day                  2-3d                  4-7d
+nhits vs gbm                                 -0.043 p=0.106        +0.028 p=0.385        +0.031 p=0.257        +0.052 p=0.003*
+patchtst vs gbm                              -0.027 p=0.243        +0.023 p=0.451        +0.014 p=0.541        +0.029 p=0.073 
+chronos_bolt vs gbm                          -0.039 p=0.088        -0.000 p=0.992        -0.009 p=0.708        +0.020 p=0.223 
+nhits vs snaive                              -0.133 p=0.011*       -0.093 p=0.087        -0.119 p=0.007*       -0.041 p=0.082 
+chronos_bolt vs snaive                       -0.132 p=0.006*       -0.124 p=0.015*       -0.161 p=0.000*       -0.075 p=0.001*
+
+=== Q5 model class (hourly, regime A only) — MCB mean ranks (blocks = series x origin; * = in best set) ===
+        1h (N=889, CD=0.20): snaive 2.90* | chronos_bolt 3.00* | nhits 3.00* | gbm 3.02* | patchtst 3.07*
+  same_day (N=1741, CD=0.15): chronos_bolt 2.61* | gbm 2.82 | patchtst 2.99 | nhits 3.04 | snaive 3.54
+      2-3d (N=1743, CD=0.15): chronos_bolt 2.56* | gbm 2.63* | patchtst 2.96 | nhits 3.10 | snaive 3.76
+      4-7d (N=1744, CD=0.15): gbm 2.56* | chronos_bolt 2.73 | patchtst 2.86 | nhits 3.24 | snaive 3.61
+
+=== Q5 model class (hourly, regime B only) — DM tests (per-origin-day differentials, NW lag 1) ===
+pair                                                      1h              same_day                  2-3d                  4-7d
+nhits vs gbm                                 -0.058 p=0.061        -0.015 p=0.596        -0.026 p=0.439        +0.020 p=0.488 
+patchtst vs gbm                              -0.040 p=0.201        -0.014 p=0.692        -0.045 p=0.092        -0.002 p=0.947 
+chronos_bolt vs gbm                          -0.106 p=0.003*       -0.057 p=0.124        -0.063 p=0.095        -0.012 p=0.694 
+nhits vs snaive                              -0.261 p=0.000*       -0.223 p=0.000*       -0.173 p=0.000*       -0.104 p=0.001*
+chronos_bolt vs snaive                       -0.310 p=0.000*       -0.264 p=0.000*       -0.210 p=0.000*       -0.136 p=0.000*
+
+=== Q5 model class (hourly, regime B only) — MCB mean ranks (blocks = series x origin; * = in best set) ===
+        1h (N=392, CD=0.31): chronos_bolt 2.74* | nhits 2.93* | gbm 3.05 | patchtst 3.07 | snaive 3.21
+  same_day (N=717, CD=0.23): chronos_bolt 2.42* | nhits 2.81 | patchtst 2.88 | gbm 2.89 | snaive 4.01
+      2-3d (N=718, CD=0.23): chronos_bolt 2.44* | patchtst 2.71 | nhits 2.80 | gbm 3.02 | snaive 4.03
+      4-7d (N=720, CD=0.23): chronos_bolt 2.58* | gbm 2.73* | patchtst 2.88 | nhits 2.89 | snaive 3.93
+
+=== Q5 model class (hourly, regime C only) — DM tests (per-origin-day differentials, NW lag 1) ===
+pair                                                      1h              same_day                  2-3d                  4-7d
+nhits vs gbm                                 -0.069 p=0.150        +0.106 p=0.056        +0.145 p=0.007*       +0.086 p=0.000*
+patchtst vs gbm                              -0.076 p=0.125        +0.118 p=0.090        +0.119 p=0.063        +0.044 p=0.002*
+chronos_bolt vs gbm                          -0.162 p=0.000*       +0.069 p=0.103        +0.052 p=0.219        +0.050 p=0.001*
+nhits vs snaive                              -0.243 p=0.003*       -0.015 p=0.741        +0.025 p=0.615        -0.018 p=0.571 
+chronos_bolt vs snaive                       -0.336 p=0.000*       -0.052 p=0.159        -0.070 p=0.116        -0.055 p=0.052 
+
+=== Q5 model class (hourly, regime C only) — MCB mean ranks (blocks = series x origin; * = in best set) ===
+        1h (N=607, CD=0.25): chronos_bolt 2.69* | patchtst 2.85* | nhits 2.86* | gbm 3.15 | snaive 3.46
+  same_day (N=1873, CD=0.14): gbm 2.68* | chronos_bolt 2.93 | nhits 3.01 | patchtst 3.10 | snaive 3.28
+      2-3d (N=1890, CD=0.14): gbm 2.46* | chronos_bolt 2.84 | snaive 3.15 | patchtst 3.20 | nhits 3.36
+      4-7d (N=1874, CD=0.14): gbm 2.55* | patchtst 2.79 | chronos_bolt 2.98 | nhits 3.17 | snaive 3.50

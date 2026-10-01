@@ -1,0 +1,88 @@
+
+=== Q2 Stage 1 (hourly, all regimes) — DM tests (per-origin-day differentials, NW lag 1) ===
+pair                                                      1h              same_day                  2-3d                  4-7d
+rec_none vs rec_l2                           -0.045 p=0.013*       -0.057 p=0.015*       -0.063 p=0.018*       -0.075 p=0.004*
+rec_none vs rec_l2l3                         -0.094 p=0.005*       -0.159 p=0.001*       -0.196 p=0.007*       -0.135 p=0.000*
+cal_none vs cal_l2                           -0.031 p=0.377        -0.030 p=0.381        -0.062 p=0.054        -0.079 p=0.022*
+cal_none vs cal_l2l3                         -0.026 p=0.564        -0.068 p=0.208        -0.142 p=0.046*       -0.055 p=0.162 
+rec_none vs cal_none                         -0.080 p=0.005*       -0.075 p=0.000*       -0.049 p=0.002*       -0.042 p=0.012*
+
+=== Q2 Stage 1 (hourly, all regimes) — MCB mean ranks (blocks = series x origin; * = in best set) ===
+        1h (N=1910, CD=0.17): rec_none 3.12* | rec_l2 3.41 | rec_l2l3 3.55 | cal_none 3.60 | cal_l2l3 3.61 | cal_l2 3.72
+  same_day (N=4343, CD=0.11): rec_none 2.98* | rec_l2 3.35 | cal_none 3.51 | cal_l2 3.59 | cal_l2l3 3.74 | rec_l2l3 3.82
+      2-3d (N=4360, CD=0.11): rec_none 2.89* | cal_none 3.26 | rec_l2 3.39 | cal_l2 3.66 | cal_l2l3 3.84 | rec_l2l3 3.96
+      4-7d (N=4350, CD=0.11): rec_none 2.82* | cal_none 3.20 | cal_l2l3 3.56 | rec_l2 3.59 | cal_l2 3.85 | rec_l2l3 3.98
+
+=== Q2 Stage 2 (daily, all regimes) — DM tests (per-origin-day differentials, NW lag 4) ===
+    daily long buckets: overlapping origins -> anti-conservative p
+pair                                                    1-7d                 8-14d                15-28d                29-56d               57-112d
+splice_cal vs fine                           -0.024 p=0.128        -0.022 p=0.082        -0.048 p=0.115        -0.066 p=0.110        -0.088 p=0.001*
+splice_cal vs splice                         -0.039 p=0.068        -0.069 p=0.071        -0.103 p=0.070        -0.152 p=0.103        -0.163 p=0.052 
+fine vs splice                               -0.016 p=0.594        -0.047 p=0.276        -0.055 p=0.483        -0.086 p=0.491        -0.076 p=0.420 
+
+=== Q2 Stage 2 (daily, all regimes) — MCB mean ranks (blocks = series x origin; * = in best set) ===
+      1-7d (N=1458, CD=0.09): splice_cal 1.90* | splice 2.04 | fine 2.06
+     8-14d (N=1451, CD=0.09): splice_cal 1.88* | fine 2.03 | splice 2.09
+    15-28d (N=1382, CD=0.09): splice_cal 1.79* | splice 2.10 | fine 2.11
+    29-56d (N=1244, CD=0.09): splice_cal 1.77* | fine 2.09 | splice 2.14
+   57-112d (N=947, CD=0.11): splice_cal 1.75* | splice 2.08 | fine 2.17
+
+=== Q2 Stage 2 (daily, regime A only) — DM tests (per-origin-day differentials, NW lag 4) ===
+pair                                                    1-7d                 8-14d                15-28d                29-56d               57-112d
+splice_cal vs fine                           -0.016 p=0.341        -0.026 p=0.226        -0.044 p=0.202        -0.064 p=0.052        -0.074 p=0.026*
+splice_cal vs splice                         -0.078 p=0.079        -0.145 p=0.038*       -0.202 p=0.034*       -0.277 p=0.035*       -0.272 p=0.011*
+fine vs splice                               -0.062 p=0.233        -0.118 p=0.114        -0.158 p=0.157        -0.213 p=0.159        -0.198 p=0.019*
+
+=== Q2 Stage 2 (daily, regime A only) — MCB mean ranks (blocks = series x origin; * = in best set) ===
+      1-7d (N=584, CD=0.14): splice_cal 1.85* | fine 2.02 | splice 2.13
+     8-14d (N=584, CD=0.14): splice_cal 1.75* | fine 2.00 | splice 2.25
+    15-28d (N=558, CD=0.14): splice_cal 1.66* | fine 2.05 | splice 2.30
+    29-56d (N=504, CD=0.15): splice_cal 1.61* | fine 2.06 | splice 2.33
+   57-112d (N=385, CD=0.17): splice_cal 1.64* | fine 2.08 | splice 2.29
+
+=== Q3 learning curve (daily, all regimes) — DM tests (per-origin-day differentials, NW lag 4) ===
+    daily long buckets: overlapping origins -> anti-conservative p
+pair                                                    1-7d                 8-14d                15-28d                29-56d               57-112d
+k02_aug vs k02_fine                          +0.360 p=0.000*       +0.362 p=0.000*       +0.294 p=0.000*       +0.235 p=0.000*       +0.170 p=0.008*
+k04_aug vs k04_fine                          +0.035 p=0.061        +0.025 p=0.034*       -0.006 p=0.835        -0.030 p=0.530        -0.057 p=0.020*
+k08_aug vs k08_fine                          -0.012 p=0.567        -0.007 p=0.672        -0.028 p=0.449        -0.055 p=0.339        -0.083 p=0.000*
+k16_aug vs k16_fine                          -0.024 p=0.223        -0.016 p=0.316        -0.019 p=0.488        -0.047 p=0.144        -0.085 p=0.000*
+full_aug vs full_fine                        -0.034 p=0.065        -0.026 p=0.103        -0.031 p=0.347        -0.057 p=0.115        -0.089 p=0.000*
+k04_fine vs full_fine                        -0.022 p=0.227        +0.002 p=0.929        +0.041 p=0.254        +0.062 p=0.178        +0.050 p=0.244 
+
+=== Q3 learning curve (daily, all regimes) — MCB mean ranks (blocks = series x origin; * = in best set) ===
+      1-7d (N=1458, CD=0.35): full_aug 4.87* | k16_aug 5.04* | k08_aug 5.09* | k04_fine 5.34 | k04_aug 5.41 | k08_fine 5.45 | k16_fine 5.47 | full_fine 5.57 | k02_fine 6.11 | k02_aug 6.65
+     8-14d (N=1451, CD=0.36): full_aug 4.98* | k16_aug 5.21* | k08_aug 5.24* | k04_aug 5.36 | full_fine 5.39 | k08_fine 5.41 | k16_fine 5.44 | k04_fine 5.56 | k02_fine 5.81 | k02_aug 6.61
+    15-28d (N=1382, CD=0.36): full_aug 4.74* | k16_aug 5.08* | k08_aug 5.18 | full_fine 5.36 | k04_aug 5.37 | k16_fine 5.43 | k08_fine 5.68 | k04_fine 5.78 | k02_fine 6.09 | k02_aug 6.29
+    29-56d (N=1244, CD=0.38): full_aug 4.55* | k16_aug 4.81* | k08_aug 5.03 | k04_aug 5.22 | full_fine 5.61 | k16_fine 5.83 | k04_fine 5.89 | k08_fine 5.90 | k02_aug 6.03 | k02_fine 6.14
+   57-112d (N=947, CD=0.44): full_aug 4.23* | k16_aug 4.38* | k08_aug 4.95 | k04_aug 5.30 | k02_aug 5.91 | full_fine 5.91 | k16_fine 5.97 | k04_fine 6.08 | k02_fine 6.10 | k08_fine 6.16
+
+=== Q3 learning curve (daily, regime A only) — DM tests (per-origin-day differentials, NW lag 4) ===
+pair                                                    1-7d                 8-14d                15-28d                29-56d               57-112d
+k02_aug vs k02_fine                          +0.083 p=0.007*       +0.076 p=0.000*       +0.019 p=0.568        -0.038 p=0.559        -0.057 p=0.336 
+k04_aug vs k04_fine                          +0.076 p=0.003*       +0.045 p=0.135        +0.002 p=0.967        -0.024 p=0.781        -0.019 p=0.683 
+k08_aug vs k08_fine                          +0.007 p=0.826        -0.001 p=0.974        -0.029 p=0.595        -0.041 p=0.603        -0.050 p=0.278 
+k16_aug vs k16_fine                          -0.007 p=0.798        -0.015 p=0.619        -0.012 p=0.722        -0.047 p=0.133        -0.062 p=0.046*
+full_aug vs full_fine                        -0.023 p=0.312        -0.028 p=0.287        -0.027 p=0.469        -0.054 p=0.120        -0.071 p=0.016*
+k04_fine vs full_fine                        -0.013 p=0.513        +0.009 p=0.693        +0.053 p=0.097        +0.039 p=0.223        +0.026 p=0.360 
+
+=== Q3 learning curve (daily, regime A only) — MCB mean ranks (blocks = series x origin; * = in best set) ===
+      1-7d (N=584, CD=0.56): full_aug 4.77* | k16_aug 5.20* | k04_fine 5.21* | k08_aug 5.37 | k16_fine 5.49 | full_fine 5.50 | k08_fine 5.52 | k02_fine 5.74 | k04_aug 5.95 | k02_aug 6.25
+     8-14d (N=584, CD=0.56): full_aug 4.76* | k16_aug 5.25* | k08_aug 5.32* | full_fine 5.32* | k08_fine 5.48 | k16_fine 5.50 | k02_fine 5.55 | k04_fine 5.65 | k04_aug 5.86 | k02_aug 6.31
+    15-28d (N=558, CD=0.57): full_aug 4.50* | k16_aug 5.02* | k08_aug 5.15 | full_fine 5.17 | k16_fine 5.35 | k04_aug 5.61 | k08_fine 5.91 | k02_aug 6.06 | k04_fine 6.07 | k02_fine 6.17
+    29-56d (N=504, CD=0.60): full_aug 4.28* | k16_aug 4.66* | k04_aug 5.30 | k08_aug 5.31 | k02_aug 5.53 | full_fine 5.64 | k16_fine 5.90 | k04_fine 6.01 | k08_fine 6.09 | k02_fine 6.27
+   57-112d (N=385, CD=0.69): full_aug 3.99* | k16_aug 4.22* | k08_aug 5.08 | full_fine 5.72 | k16_fine 5.76 | k04_aug 5.79 | k02_aug 5.81 | k08_fine 6.06 | k04_fine 6.10 | k02_fine 6.46
+
+=== Q4 cold start (hourly, Epic) — DM tests (per-origin-day differentials, NW lag 1) ===
+pair                                                      1h              same_day                  2-3d                  4-7d
+k02_global_all vs k02_local_series           -0.164 p=0.001*       -0.077 p=0.023*       -0.078 p=0.011*       -0.065 p=0.000*
+k04_global_all vs k04_local_series           -0.044 p=0.176        -0.014 p=0.589        -0.014 p=0.643        -0.027 p=0.054 
+k08_global_all vs k08_local_series           -0.046 p=0.046*       -0.016 p=0.262        +0.001 p=0.961        -0.024 p=0.208 
+full_global_all vs full_local_series         -0.030 p=0.133        -0.012 p=0.491        +0.007 p=0.834        -0.038 p=0.042*
+k02_global_all vs full_global_all            +0.061 p=0.068        +0.071 p=0.003*       +0.074 p=0.028*       +0.052 p=0.032*
+
+=== Q4 cold start (hourly, Epic) — MCB mean ranks (blocks = series x origin; * = in best set) ===
+        1h (N=399, CD=0.83): k08_global_all 6.02* | k08_local_park 6.05* | full_global_all 6.12* | full_local_series 6.32* | full_local_park 6.34* | k04_local_park 6.34* | k04_global_all 6.41* | k08_local_series 6.44* | k04_local_series 6.46* | k02_global_all 6.75* | k02_local_park 7.28 | k02_local_series 7.47
+  same_day (N=717, CD=0.62): full_local_park 5.62* | full_global_all 5.65* | full_local_series 5.91* | k04_global_all 5.93* | k08_global_all 5.99* | k08_local_park 6.28 | k08_local_series 6.29 | k04_local_series 6.37 | k04_local_park 6.43 | k02_global_all 7.21 | k02_local_series 7.91 | k02_local_park 8.41
+      2-3d (N=718, CD=0.62): full_local_park 5.58* | full_local_series 5.66* | full_global_all 5.72* | k04_global_all 5.76* | k08_global_all 6.11* | k08_local_series 6.12* | k04_local_park 6.26 | k04_local_series 6.28 | k08_local_park 6.43 | k02_global_all 7.29 | k02_local_series 8.39 | k02_local_park 8.41
+      4-7d (N=720, CD=0.62): full_global_all 4.99* | full_local_park 5.35* | k08_global_all 5.51* | k04_global_all 5.85 | full_local_series 6.13 | k08_local_series 6.24 | k08_local_park 6.34 | k04_local_series 6.49 | k04_local_park 6.83 | k02_global_all 7.15 | k02_local_series 8.33 | k02_local_park 8.80

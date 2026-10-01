@@ -1,0 +1,98 @@
+Q4 cold start: 12 Epic series, 27,141 Epic rows / 134,123 rest rows | 20 eval days (2026-05-01 .. 2026-09-11) | k in [2, 4, 8, 'full']
+saved 676,500 forecast rows -> data/q4_coldstart_fc.parquet
+
+=== k02_local_series — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399  12.79  19.49  0.86  0.37  0.59
+same_day   7613  13.05  19.80  0.90  0.35  0.57
+2-3d      16092  14.26  21.71  0.95  0.34  0.55
+4-7d      32271  12.73  19.35  0.88  0.36  0.58
+
+=== k02_local_park — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399  11.40  17.31  0.78  0.41  0.62
+same_day   7613  12.74  18.94  0.91  0.34  0.56
+2-3d      16092  14.17  21.52  0.96  0.34  0.55
+4-7d      32271  13.19  20.01  0.92  0.35  0.56
+
+=== k02_global_all — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399  10.07  15.42  0.70  0.45  0.68
+same_day   7613  11.59  17.46  0.83  0.37  0.61
+2-3d      16092  12.77  19.43  0.87  0.36  0.58
+4-7d      32271  11.73  17.97  0.81  0.38  0.61
+
+=== k04_local_series — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399  10.10  16.09  0.69  0.47  0.65
+same_day   7613  11.14  17.18  0.79  0.40  0.63
+2-3d      16092  12.17  18.76  0.82  0.39  0.61
+4-7d      32271  11.80  18.24  0.80  0.40  0.61
+
+=== k04_local_park — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399   9.81  15.33  0.67  0.49  0.67
+same_day   7613  11.03  16.82  0.79  0.40  0.62
+2-3d      16092  12.20  18.78  0.83  0.38  0.60
+4-7d      32271  11.65  17.89  0.81  0.39  0.61
+
+=== k04_global_all — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399   9.51  14.56  0.65  0.44  0.67
+same_day   7613  10.81  16.59  0.77  0.41  0.64
+2-3d      16092  11.84  18.24  0.81  0.39  0.61
+4-7d      32271  11.17  17.27  0.77  0.40  0.63
+
+=== k08_local_series — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399   9.69  15.35  0.67  0.45  0.70
+same_day   7613  10.99  16.89  0.78  0.41  0.64
+2-3d      16092  11.92  18.15  0.81  0.40  0.60
+4-7d      32271  11.63  17.82  0.80  0.40  0.62
+
+=== k08_local_park — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399   9.29  14.80  0.64  0.52  0.68
+same_day   7613  10.90  16.69  0.78  0.41  0.63
+2-3d      16092  12.09  18.57  0.83  0.38  0.61
+4-7d      32271  11.41  17.60  0.79  0.40  0.63
+
+=== k08_global_all — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399   9.02  14.27  0.62  0.50  0.69
+same_day   7613  10.62  16.30  0.76  0.43  0.65
+2-3d      16092  11.86  18.16  0.81  0.38  0.60
+4-7d      32271  11.15  17.31  0.77  0.40  0.63
+
+=== full_local_series — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399   9.43  14.64  0.66  0.46  0.69
+same_day   7613  10.64  16.03  0.77  0.41  0.63
+2-3d      16092  11.70  17.90  0.80  0.40  0.61
+4-7d      32271  11.69  18.15  0.80  0.40  0.62
+
+=== full_local_park — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399   9.28  14.53  0.65  0.48  0.67
+same_day   7613  10.44  15.90  0.77  0.41  0.64
+2-3d      16092  11.67  17.85  0.80  0.40  0.61
+4-7d      32271  11.11  17.12  0.77  0.41  0.63
+
+=== full_global_all — Epic, by horizon bucket ===
+              n    mae   rmse  mase    w5   w10
+bucket                                         
+1h          399   9.08  14.16  0.64  0.47  0.70
+same_day   7613  10.49  16.03  0.76  0.41  0.65
+2-3d      16092  11.71  17.86  0.80  0.39  0.61
+4-7d      32271  11.03  17.12  0.76  0.41  0.64
