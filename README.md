@@ -1,6 +1,14 @@
 # Forecasting Benchmark Workspace
 
-Phase 1 infrastructure for the paper (see `../FORECASTING_PAPER_PLAN.md`).
+Code and saved outputs for the paper *Forecasting Theme Park Wait Times
+under Heterogeneous Data Availability* (arXiv link TBD).
+
+**Dataset:** raw 5-minute readings, curated hourly/daily targets, covariates,
+protocol, and saved forecasts are published at
+https://huggingface.co/datasets/Hotwiredhorizon/themepark_wait_time
+(the `data/` folder here contains the same targets and forecast parquets so
+the analysis scripts run out of the box; third-party Queue-Times archive
+values are excluded from both — no redistribution permission).
 
 ## Files
 - `config.py` — paths, park/regime mapping, series curation rules,
